@@ -1,0 +1,57 @@
+$white: #fff;
+$black: #000;
+$purple1: #442950;
+$purple2: #746e80;
+$purple3: #b1608e;
+$purple4: #f8bbd0;
+$green1: #b6ccb1;
+$green2: #95af5c;
+$small-resolution: 576px;
+$medium-resolution: 768px;
+
+@mixin title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  @media (min-width: $medium-resolution) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@mixin subtitle {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+  @media (min-width: $medium-resolution) {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+@mixin description {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  @media (min-width: $medium-resolution) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@mixin text {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+@mixin small-text {
+  font-size: 16px;
+  line-height: 22px;
+  @media (min-width: $medium-resolution) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+
+

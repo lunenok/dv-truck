@@ -61,11 +61,11 @@ module.exports = {
       template: __dirname + "/source/index.html",
       inject: "body",
     }),
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     { from: "./source/images", to: "images" },
-    //   ],
-    // }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "./source/images", to: "images" },
+      ],
+    }),
     new MiniCssExtractPlugin()
   ],
 };

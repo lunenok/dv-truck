@@ -1,3 +1,361 @@
+@import './variables.scss';
+
 body {
   font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.button {
+  width: 260px;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  background-color: $purple1;
+  color: $white;
+  &--header-price {
+    margin-bottom: 20px;
+    @media (min-width: $small-resolution) {
+      margin-bottom: 0;
+    }
+  }
+  @media (min-width: $medium-resolution) {
+    width: 300px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  &:hover, &:focus {
+    outline: 3px solid $green2;
+  }
+}
+
+.separator {
+  margin-bottom: 10px;
+  width: 180px;
+  height: 3px;
+  background-color: $green2;
+}
+
+.header {
+  padding-top: 10px;
+  padding-bottom: 70px;
+  color: $white;
+  background-image: url('../images/main1.jpg');
+  background-size: cover;
+  @media (min-width: $medium-resolution) {
+    padding-bottom: 90px;
+  }
+
+  &__title {
+    margin-top: -25px;
+    @include title();
+    @media (min-width: $medium-resolution) {
+      font-size: 44px;
+      line-height: 56px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 60px;
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 300;
+    @media (min-width: $medium-resolution) {
+      margin-bottom: 80px;
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+
+  &__about--big {
+    margin-bottom: 20px;
+    @include title();
+    @media (min-width: $medium-resolution) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__about--min {
+    margin-bottom: 30px;
+    @include subtitle();
+    @media (min-width: $medium-resolution) {
+      margin-bottom: 90px;
+    }
+  }
+
+  &__button-container {
+    margin: 0 auto;
+    width: 280px;
+    @media (min-width: $small-resolution) {
+      width: auto;
+    }
+  }
+}
+
+.services {
+  padding: 40px 40px 0 40px;
+  max-width: 992px;
+
+  &__container {
+    position: relative;
+    padding: 0 20px;
+    @media (min-width: $small-resolution) {
+      padding: 0 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    @include title();
+
+  }
+
+  &__subtitle {
+    display: block;
+    margin-top: 10px;
+    @include subtitle();
+  }
+
+  &__block {
+    padding: 0;
+    margin-bottom: 60px;
+  }
+
+  &__block-number {
+    margin-right: 10px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    @media (min-width: $medium-resolution) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__block-description {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    @media (min-width: $medium-resolution) {
+      font-size: 18px;
+    }
+  }
+
+  &__block-about {
+    @include small-text();
+    font-weight: 300;
+    @media (min-width: $medium-resolution) {
+      font-size: 18px;
+    }
+  }
+}
+
+.about {
+  padding-top: 100px;
+  &__title {
+    margin-bottom: 10px;
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+  }
+
+  &__list {
+    padding: 0;
+    padding-top: 60px;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 60px;
+  }
+
+  &__item-main {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__item-description {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+}
+
+.clients {
+  padding-top: 100px;
+
+  &__list {
+    padding: 0 20px;
+    padding-top: 60px;
+    margin: 0;
+  }
+
+  &__item {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 35px;
+    width: 280px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include title();
+  }
+
+  &__picture {
+    margin-bottom: 20px;
+    @media (min-width: $medium-resolution) {
+      width: 375px;
+      height: 212px;
+    }
+  }
+
+  &__description {
+    @include description()
+  }
+
+  &__description-container {
+    padding: 0 20px;
+    @media (min-width: $medium-resolution) {
+      padding: 0 100px;
+    }
+ }
+}
+
+.benefits {
+  padding: 0 20px;
+  padding-top: 100px;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  &__item {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    @include title();
+  }
+
+  &__name {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    @include description();
+    font-weight: 300
+  }
+
+  @media (min-width: $small-resolution) {
+    padding: 0 40px;
+  }
+}
+
+.specials {
+  padding: 0 40px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+
+  &__title {
+    @include title();
+  }
+
+  &__subtitle {
+    @include subtitle();
+    margin-top: 20px;
+  }
+
+  &__list {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    padding-top: 60px;
+  }
+
+  &__name {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+
+  &__description {
+    @include description();
+    font-weight: 300
+  }
+}
+
+.contacts {
+  padding: 0 20px;
+  max-width: 992px;
+  @include description();
+  color: $black;
+
+  &__form-title {
+    margin-bottom: 10px;
+  }
+
+  &__form-container {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    @include title();
+  }
+
+  &__info {
+    color: $black;
+  }
+
+  &__phone, &__mail, &__address {
+    margin-bottom: 25px;
+  }
+
+  &__input {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border: 1px solid rgba(205, 205, 205, 0.7);
+    border-radius: 4px 4px 4px 4px;
+    outline: none;
+
+    &:hover, &:focus {
+      border: 1px solid $purple1;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    width: auto;
+  }
+}
+
+.footer {
+  padding: 20px 20px;
+  background-color: $purple1;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
 }
